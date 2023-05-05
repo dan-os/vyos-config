@@ -24,7 +24,8 @@ set firewall group address-group k8s_nodes address '10.1.1.36'
 # set firewall group address-group mqtt_clients address 'x.x.x.x'
 # set firewall group address-group nas address 'x.x.x.x'
 # set firewall group address-group plex_clients address 'x.x.x.x'
-# set firewall group address-group printers address 'x.x.x.x'
+
+set firewall group address-group printers address '10.1.3.5'
 
 set firewall group address-group unifi_devices address '10.1.0.11'
 set firewall group address-group unifi_devices address '10.1.0.12'
