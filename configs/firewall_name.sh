@@ -572,6 +572,11 @@ set firewall name wan-local rule 1 action 'accept'
 set firewall name wan-local rule 1 description 'Rule: accept_wireguard'
 set firewall name wan-local rule 1 destination port '51820'
 set firewall name wan-local rule 1 protocol 'udp'
+# Accept SSH (temp)
+set firewall name wan-local rule 2 action 'accept'
+set firewall name wan-local rule 2 description 'Rule: accept_ssh'
+set firewall name wan-local rule 2 destination port 'ssh'
+set firewall name wan-local rule 2 protocol 'tcp'
 
 # From WAN to SERVICES
 set firewall name wan-services description 'From WAN to SERVICES'

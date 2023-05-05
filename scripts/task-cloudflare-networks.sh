@@ -1,4 +1,5 @@
 #!/bin/vbash
+
 # This script updates network-groups 'cloudflare-networks-v4' and 
 # 'cloudflare-networks-v6' with the latest Cloudflare networks.
 
@@ -12,7 +13,7 @@ configure
 
 # Delete all related config
 delete firewall group network-group cloudflare-networks-ipv4
-delete firewall group ipv6-network-group cloudflare-networks-v6
+delete firewall group ipv6-network-group cloudflare-networks-ipv6
 delete system task-scheduler task $(basename $(realpath "$0") .sh)
 
 # Set network-group for ipv4
@@ -22,9 +23,9 @@ for network4 in $(curl -fsSL https://www.cloudflare.com/ips-v4); do
 done
 
 # Set network-group for ipv6
-set firewall group ipv6-network-group cloudflare-networks-v6 description 'Task Managed: Cloudflare IPv6 networks'
+set firewall group ipv6-network-group cloudflare-networks-ipv6 description 'Task Managed: Cloudflare IPv6 networks'
 for network6 in $(curl -fsSL https://www.cloudflare.com/ips-v6); do
-  set firewall group ipv6-network-group cloudflare-networks-v6 network $network6
+  set firewall group ipv6-network-group cloudflare-networks-ipv6 network $network6
 done
 
 # Set task

@@ -15,7 +15,7 @@ tee /home/vyos/.gitconfig <<END >/dev/null
 END
 
 tee -a /home/vyos/.bash_aliases <<END >/dev/null
-export SOPS_AGE_KEY_FILE=/config/secrets/vyos.key
+export SOPS_AGE_KEY_FILE=/config/secrets/vyos.agekey
 export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
 export VISUAL=nano
 export EDITOR=nano
