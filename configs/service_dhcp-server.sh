@@ -45,9 +45,9 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 name-serv
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 start '10.1.1.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 stop '10.1.1.254'
 
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.31'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.11'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora mac-address 'ec:f4:bb:ce:75:44' # Dell PowerEdge R720
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares ip-address '10.1.1.32'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares ip-address '10.1.1.12'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares mac-address '70:0f:6a:38:ba:24' # Cisco UCS C240 M4
 
 # TRUSTED network
