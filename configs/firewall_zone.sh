@@ -34,7 +34,7 @@ set firewall zone services from trusted firewall name 'trusted-services'
 set firewall zone services from guest firewall name 'guest-services'
 set firewall zone services from iot firewall name 'iot-services'
 set firewall zone services from wan firewall name 'wan-services'
-set firewall zone services interface 'pod-containers'
+set firewall zone services interface 'pod-services'
 
 # SERVERS
 set firewall zone servers description 'Servers zone'
