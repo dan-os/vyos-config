@@ -1,0 +1,42 @@
+; Make sure to update the epoch time in the SOA records so coreDNS picks up the changes automatically
+; https://www.epochconverter.com/
+
+; SOA Records
+$TTL 3600
+$ORIGIN dan.sm.
+@ 3600 IN SOA dan.sm. gateway.dan.sm. (
+  1682790096         ; serial number (epoch timestamp)
+  7200               ; refresh period
+  3600               ; retry period
+  1209600            ; expire time
+  3600               ; minimum ttl
+)
+
+; NS Records
+@                          IN  NS ns.dan.sm.
+
+; LAN
+gateway                    IN  A  10.1.0.1
+
+; SERVICES
+ns                         IN  A  10.5.0.4
+c0                         IN  A  10.5.0.2
+unifi                      IN  A  10.5.0.10
+
+; SERVERS
+ares                       IN  A  10.1.1.11
+aurora                     IN  A  10.1.1.12
+
+; CLUSTERS
+c0-ares-0                  IN  A  10.1.1.31
+c0-ares-1                  IN  A  10.1.1.32
+c0-ares-2                  IN  A  10.1.1.33
+c0-aurora-0                IN  A  10.1.1.34
+c0-aurora-1                IN  A  10.1.1.35
+c0-aurora-2                IN  A  10.1.1.36
+
+; IOT
+; hue-bridge               IN  A  10.1.3.18
+
+; CNAME Records
+vpn                        IN  CNAME  gateway.dan.sm.

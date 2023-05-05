@@ -1,0 +1,8 @@
+# Ignore everything
+/*
+!/config/
+/config/*
+
+# But not these files...
+!.gitignore
+!/config/dnsdist.conf

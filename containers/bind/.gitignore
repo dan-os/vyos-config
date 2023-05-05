@@ -1,0 +1,11 @@
+# Ignore everything
+/*
+!/config/
+/config/*
+!/config/zones/
+/config/zones/*
+
+# But not these files...
+!.gitignore
+!/config/named.conf
+!/config/zones/db.*

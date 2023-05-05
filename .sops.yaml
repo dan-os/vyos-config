@@ -1,0 +1,8 @@
+---
+creation_rules:
+  - path_regex: ^\.enc\.env$
+    encrypted_regex: (^SECRET_[a-zA-Z0-9_]*)
+    # Local, VyOS
+    age: >-
+      age150tjn37jsl7j9un969ycdwn33gf7wxzzyxsv2qsn43akfxhvp5vq0herz2,
+      age1993zvmc5rg6wdvsqawf30033k5lskj4dzy2ujrwfzkd6q8ud43lq4wdlrq
