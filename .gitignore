@@ -1,9 +1,16 @@
-# Trash
-.DS_Store
-Thumbs.db
-# Sops
-*.agekey
-.decrypted~*
-# Environment
-*.env
-!*.enc.env
+# Ignore everything
+/*
+
+# But not these files...
+!.gitignore
+!/.enc.env
+!/.sops.yaml
+!/.sopsrc
+!/apply-config.sh
+
+!/.vscode/
+!/bootstrap/
+!/configs/
+!/containers/
+!/scripts/
+!/secrets/
