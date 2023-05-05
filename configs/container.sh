@@ -27,23 +27,6 @@ set container name haproxy volume config source '/config/containers/haproxy/conf
 set container name haproxy volume config destination '/usr/local/etc/haproxy/haproxy.cfg'
 set container name haproxy volume config mode 'ro'
 
-# # coredns
-# set container name coredns image 'docker.io/coredns/coredns:1.10.1'
-# set container name coredns cap-add 'net-bind-service'
-# set container name coredns network services address '10.5.0.3'
-# set container name coredns shared-memory '0'
-# set container name coredns memory '0'
-# set container name coredns restart 'on-failure'
-# set container name coredns volume config source '/config/containers/coredns/config'
-# set container name coredns volume config destination '/config'
-# set container name coredns volume config mode 'ro'
-# set container name coredns volume corefile source '/config/containers/coredns/config/Corefile'
-# set container name coredns volume corefile destination '/Corefile'
-# set container name coredns volume corefile mode 'ro'
-# set container name coredns volume vyoshosts source '/etc/hosts'
-# set container name coredns volume vyoshosts destination '/host/etc/hosts'
-# set container name coredns volume vyoshosts mode 'ro'
-
 # bind
 set container name bind image 'docker.io/internetsystemsconsortium/bind9:9.19'
 set container name bind command '/usr/sbin/named -4 -f -c /etc/bind/named.conf -u bind'
