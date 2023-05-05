@@ -13,7 +13,6 @@ load /opt/vyatta/etc/config.boot.default
 # Interfaces
 set interfaces ethernet eth0 description 'WAN'
 set interfaces ethernet eth0 hw-id 'ec:f4:bb:ce:75:45'
-set interfaces ethernet eth0 description 'WAN'
 set interfaces ethernet eth0 address 'dhcp'
 
 set interfaces ethernet eth1 description 'LAN'
