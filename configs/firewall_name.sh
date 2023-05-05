@@ -38,7 +38,7 @@ set firewall name lan-services rule 1 protocol 'tcp_udp'
 # Accept Unifi
 set firewall name lan-services rule 2 description 'Rule: accept unifi'
 set firewall name lan-services rule 2 action 'accept'
-set firewall name lan-services rule 2 destination group address-group 'unifi-controller'
+set firewall name lan-services rule 2 destination group address-group 'unifi_controller'
 
 ## From LAN to SERVERS
 set firewall name lan-servers description 'From LAN to SERVERS'
@@ -466,30 +466,16 @@ set firewall name iot-servers enable-default-log
 set firewall name iot-servers rule 2 action 'accept'
 set firewall name iot-servers rule 2 description 'Rule: accept_plex_from_plex_clients'
 set firewall name iot-servers rule 2 source group address-group 'plex_clients'
-set firewall name iot-servers rule 2 destination group address-group 'k8s_plex'
+set firewall name iot-servers rule 2 destination group address-group 'k8s_nodes'
 set firewall name iot-servers rule 2 destination port '32400'
 set firewall name iot-servers rule 2 protocol 'tcp'
-# Accept MQTT from mqtt clients
-set firewall name iot-servers rule 4 action 'accept'
-set firewall name iot-servers rule 4 description 'Rule: accept_mqtt_from_mqtt_clients'
-set firewall name iot-servers rule 4 source group address-group 'mqtt_clients'
-set firewall name iot-servers rule 4 destination group address-group 'k8s_mqtt'
-set firewall name iot-servers rule 4 destination port '1883'
-set firewall name iot-servers rule 4 protocol 'tcp'
-# Accept MQTT from esp clients
-set firewall name iot-servers rule 5 action 'accept'
-set firewall name iot-servers rule 5 description 'Rule: accept_mqtt_from_esp'
-set firewall name iot-servers rule 5 source group address-group 'esp'
-set firewall name iot-servers rule 5 destination group address-group 'k8s_mqtt'
-set firewall name iot-servers rule 5 destination port '1883'
-set firewall name iot-servers rule 5 protocol 'tcp'
-# Accept K8s ingress from allowed devices
-set firewall name iot-servers rule 9 action 'accept'
-set firewall name iot-servers rule 9 description 'Rule: accept_k8s_ingress_from_allowed_devices'
-set firewall name iot-servers rule 9 source group address-group 'k8s_ingress_allowed'
-set firewall name iot-servers rule 9 destination group address-group 'k8s_ingress'
-set firewall name iot-servers rule 9 destination port 'http,https'
-set firewall name iot-servers rule 9 protocol 'tcp'
+# # Accept K8s ingress from allowed devices
+# set firewall name iot-servers rule 9 action 'accept'
+# set firewall name iot-servers rule 9 description 'Rule: accept_k8s_ingress_from_allowed_devices'
+# set firewall name iot-servers rule 9 source group address-group 'k8s_ingress_allowed'
+# set firewall name iot-servers rule 9 destination group address-group 'k8s_ingress'
+# set firewall name iot-servers rule 9 destination port 'http,https'
+# set firewall name iot-servers rule 9 protocol 'tcp'
 
 ## From IOT to TRUSTED
 set firewall name iot-trusted description 'From IOT to TRUSTED'
@@ -552,20 +538,20 @@ set firewall name guest-trusted enable-default-log
 set firewall name guest-iot description 'From GUEST to IOT'
 set firewall name guest-iot default-action 'drop'
 set firewall name guest-iot enable-default-log
-# Accept TCP printer from allowed devices
-set firewall name guest-iot rule 1 action 'accept'
-set firewall name guest-iot rule 1 description 'Rule: accept_tcp_printer_from_allowed_devices'
-set firewall name guest-iot rule 1 source group address-group 'printer_allowed'
-set firewall name guest-iot rule 1 destination group address-group 'printers'
-set firewall name guest-iot rule 1 destination port 'http,9100'
-set firewall name guest-iot rule 1 protocol 'tcp'
-# Accept UDP printer from allowed devices
-set firewall name guest-iot rule 2 action 'accept'
-set firewall name guest-iot rule 2 description 'Rule: accept_udp_printer_from_allowed_devices'
-set firewall name guest-iot rule 2 source group address-group 'printer_allowed'
-set firewall name guest-iot rule 2 destination group address-group 'printers'
-set firewall name guest-iot rule 2 destination port '161'
-set firewall name guest-iot rule 2 protocol 'udp'
+# # Accept TCP printer from allowed devices
+# set firewall name guest-iot rule 1 action 'accept'
+# set firewall name guest-iot rule 1 description 'Rule: accept_tcp_printer_from_allowed_devices'
+# set firewall name guest-iot rule 1 source group address-group 'printer_allowed'
+# set firewall name guest-iot rule 1 destination group address-group 'printers'
+# set firewall name guest-iot rule 1 destination port 'http,9100'
+# set firewall name guest-iot rule 1 protocol 'tcp'
+# # Accept UDP printer from allowed devices
+# set firewall name guest-iot rule 2 action 'accept'
+# set firewall name guest-iot rule 2 description 'Rule: accept_udp_printer_from_allowed_devices'
+# set firewall name guest-iot rule 2 source group address-group 'printer_allowed'
+# set firewall name guest-iot rule 2 destination group address-group 'printers'
+# set firewall name guest-iot rule 2 destination port '161'
+# set firewall name guest-iot rule 2 protocol 'udp'
 
 ## From GUEST to WAN
 set firewall name guest-wan description 'From GUEST to WAN'
