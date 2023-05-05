@@ -25,4 +25,4 @@ set system task-scheduler task task-cloudflare-networks executable path '/config
 set system task-scheduler task task-cloudflare-networks interval '6h'
 
 # Timezone
-set system time-zone '${TIMEZONE}'
+set system time-zone "${TIMEZONE}"

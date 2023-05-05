@@ -24,8 +24,8 @@ set firewall name lan-local rule 3 protocol 'udp'
 # Drop multicast to 224.0.0.1
 set firewall name lan-local rule 4 description 'Rule: drop multicast to 224.0.0.1 (no log)'
 set firewall name lan-local rule 4 action 'drop'
-set firewall name lan-local rule 5 destination address '224.0.0.1'
-set firewall name lan-local rule 6 protocol '2'
+set firewall name lan-local rule 4 destination address '224.0.0.1'
+set firewall name lan-local rule 4 protocol '2'
 
 ## From LAN to SERVICES
 set firewall name lan-services description 'From LAN to SERVICES'

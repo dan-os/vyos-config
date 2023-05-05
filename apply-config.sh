@@ -20,7 +20,7 @@ done
 
 # Load secrets into ENV vars
 if [ -f "/config/.enc.env" ]; then
-  export SOPS_AGE_KEY_FILE=/config/secrets/vyos.key
+  export SOPS_AGE_KEY_FILE=/config/secrets/vyos.agekey
 
   mapfile environmentAsArray < <(
     sops --decrypt "/config/.enc.env" \

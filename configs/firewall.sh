@@ -28,7 +28,6 @@ set firewall group address-group k8s_nodes address '10.1.1.36'
 
 set firewall group address-group unifi_devices address '10.1.0.11'
 set firewall group address-group unifi_devices address '10.1.0.12'
-set firewall group address-group unifi_devices address '10.1.0.13'
 set firewall group address-group unifi_devices address '10.1.0.21'
 set firewall group address-group unifi_devices address '10.1.0.22'
 

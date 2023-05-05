@@ -60,8 +60,8 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 name-serv
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 range 0 start '10.1.2.200'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 range 0 stop '10.1.2.254'
 
-set service dhcp-server shared-network-name LAN subnet 10.1.2.0/24 static-mapping dan-macbook ip-address '10.1.2.2'
-set service dhcp-server shared-network-name LAN subnet 10.1.2.0/24 static-mapping dan-macbook mac-address 'f4:d4:88:6e:41:4f' # Dan's Laptop
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook ip-address '10.1.2.2'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook mac-address 'f4:d4:88:6e:41:4f' # Dan's Laptop
 
 # IOT network
 set service dhcp-server shared-network-name IOT authoritative
