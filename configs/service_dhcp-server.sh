@@ -20,7 +20,7 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 lease '86400'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.200'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
-set service dhcp-server shared-network-name LAN subnet 10.0.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.0.5.10;'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.0.5.10;'
 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller ip-address '10.5.0.10'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:c9' # UDM-Pro
