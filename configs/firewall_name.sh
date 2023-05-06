@@ -30,6 +30,7 @@ set firewall name lan-local rule 4 protocol '2'
 ## From LAN to SERVICES
 set firewall name lan-services description 'From LAN to SERVICES'
 set firewall name lan-services default-action 'accept'
+set firewall name lan-services enable-default-log
 # Accept DNS
 set firewall name lan-services rule 1 action 'accept'
 set firewall name lan-services rule 1 description 'Rule: accept_dns'
@@ -64,6 +65,15 @@ set firewall name lan-guest description 'From LAN to GUEST'
 set firewall name lan-guest default-action 'drop'
 set firewall name lan-guest enable-default-log
 
+## From LAN to MANAGEMENT
+set firewall name lan-management description 'From LAN to MANAGEMENT'
+set firewall name lan-management default-action 'drop'
+set firewall name lan-management enable-default-log
+# Accept ICMP
+set firewall name lan-management rule 1 action 'accept'
+set firewall name lan-management rule 1 description 'Rule: accept_icmp'
+set firewall name lan-management rule 1 protocol 'icmp'
+
 ## From LAN to WAN
 set firewall name lan-wan description 'From LAN to WAN'
 set firewall name lan-wan default-action 'accept'
@@ -86,6 +96,7 @@ set firewall name local-lan rule 2 protocol 'tcp'
 ## From LOCAL to SERVICES
 set firewall name local-services description 'From LOCAL to SERVICES'
 set firewall name local-services default-action 'accept'
+set firewall name local-services enable-default-log
 # Accept DNS
 set firewall name local-services rule 1 action 'accept'
 set firewall name local-services rule 1 description 'Rule: accept_dns'
@@ -156,6 +167,15 @@ set firewall name local-guest description 'From LOCAL to GUEST'
 set firewall name local-guest default-action 'drop'
 set firewall name local-guest enable-default-log
 
+## From LOCAL to MANAGEMENT
+set firewall name local-management description 'From LOCAL to MANAGEMENT'
+set firewall name local-management default-action 'drop'
+set firewall name local-management enable-default-log
+# Accept ICMP
+set firewall name local-management rule 1 description 'Rule: accept icmp'
+set firewall name local-management rule 1 action 'accept'
+set firewall name local-management rule 1 protocol 'icmp'
+
 ## From LOCAL to WAN
 set firewall name local-wan description 'From LOCAL to WAN'
 set firewall name local-wan default-action 'accept'
@@ -189,6 +209,7 @@ set firewall name services-local rule 2 protocol 'udp'
 ## From SERVICES to SERVERS
 set firewall name services-servers description 'From SERVICES to SERVERS'
 set firewall name services-servers default-action 'accept'
+set firewall name services-servers enable-default-log
 # Accept ICMP
 set firewall name services-servers rule 1 action 'accept'
 set firewall name services-servers rule 1 description 'Rule: accept_icmp'
@@ -213,6 +234,11 @@ set firewall name services-guest description 'From SERVICES to GUEST'
 set firewall name services-guest default-action 'drop'
 set firewall name services-guest enable-default-log
 
+## From SERVICES to MANAGEMENT
+set firewall name services-management description 'From SERVICES to MANAGEMENT'
+set firewall name services-management default-action 'drop'
+set firewall name services-management enable-default-log
+
 # From SERVICES to WAN
 set firewall name services-wan description 'From SERVICES to WAN'
 set firewall name services-wan default-action 'accept'
@@ -221,6 +247,7 @@ set firewall name services-wan default-action 'accept'
 ## From SERVERS to LAN
 set firewall name servers-lan description 'From SERVERS to LAN'
 set firewall name servers-lan default-action 'drop'
+set firewall name servers-lan enable-default-log
 # Accept ICMP
 set firewall name servers-lan rule 1 action 'accept'
 set firewall name servers-lan rule 1 description 'Rule: accept_icmp'
@@ -295,6 +322,7 @@ set firewall name servers-services rule 2 protocol 'tcp'
 ## From SERVERS to TRUSTED
 set firewall name servers-trusted description 'From SERVERS to TRUSTED'
 set firewall name servers-trusted default-action 'drop'
+set firewall name servers-trusted enable-default-log
 # Accept ICMP
 set firewall name servers-trusted rule 1 action 'accept'
 set firewall name servers-trusted rule 1 description 'Rule: accept_icmp'
@@ -324,6 +352,15 @@ set firewall name servers-guest description 'From SERVERS to GUEST'
 set firewall name servers-guest default-action 'drop'
 set firewall name servers-guest enable-default-log
 
+## From SERVERS to MANAGEMENT
+set firewall name servers-management description 'From SERVERS to MANAGEMENT'
+set firewall name servers-management default-action 'drop'
+set firewall name servers-management enable-default-log
+# Accept ICMP
+set firewall name servers-management rule 1 action 'accept'
+set firewall name servers-management rule 1 description 'Rule: accept_icmp'
+set firewall name servers-management rule 1 protocol 'icmp'
+
 # From SERVERS to WAN
 set firewall name servers-wan description 'From SERVERS to WAN'
 set firewall name servers-wan default-action 'accept'
@@ -332,6 +369,7 @@ set firewall name servers-wan default-action 'accept'
 # From TRUSTED to LAN
 set firewall name trusted-lan description 'From TRUSTED to LAN'
 set firewall name trusted-lan default-action 'accept'
+set firewall name trusted-lan enable-default-log
 
 ## From TRUSTED to LOCAL
 set firewall name trusted-local description 'From TRUSTED to LOCAL'
@@ -381,6 +419,7 @@ set firewall name trusted-local rule 10 protocol 'tcp'
 ## From TRUSTED to SERVICES
 set firewall name trusted-services description 'From TRUSTED to SERVICES'
 set firewall name trusted-services default-action 'accept'
+set firewall name trusted-services enable-default-log
 # Accept DNS
 set firewall name trusted-services rule 1 action 'accept'
 set firewall name trusted-services rule 1 description 'Rule: accept_dns'
@@ -390,6 +429,7 @@ set firewall name trusted-services rule 1 protocol 'tcp_udp'
 ## From TRUSTED to SERVERS
 set firewall name trusted-servers description 'From TRUSTED to SERVERS'
 set firewall name trusted-servers default-action 'accept'
+set firewall name trusted-servers enable-default-log
 # Accept ICMP
 set firewall name trusted-servers rule 1 action 'accept'
 set firewall name trusted-servers rule 1 description 'Rule: accept_icmp'
@@ -398,6 +438,7 @@ set firewall name trusted-servers rule 1 protocol 'icmp'
 ## From TRUSTED to IOT
 set firewall name trusted-iot description 'From TRUSTED to IOT'
 set firewall name trusted-iot default-action 'accept'
+set firewall name trusted-iot enable-default-log
 # Accept ICMP
 set firewall name trusted-iot rule 1 action 'accept'
 set firewall name trusted-iot rule 1 description 'Rule: accept_icmp'
@@ -407,6 +448,30 @@ set firewall name trusted-iot rule 1 protocol 'icmp'
 set firewall name trusted-guest description 'From TRUSTED to GUEST'
 set firewall name trusted-guest default-action 'drop'
 set firewall name trusted-guest enable-default-log
+
+## From TRUSTED to MANAGEMENT
+set firewall name trusted-management description 'From TRUSTED to MANAGEMENT'
+set firewall name trusted-management default-action 'accept'
+set firewall name trusted-management enable-default-log
+# Accept ICMP
+set firewall name trusted-management rule 1 action 'accept'
+set firewall name trusted-management rule 1 description 'Rule: accept_icmp'
+set firewall name trusted-management rule 1 protocol 'icmp'
+# Accept HTTP/HTTPS
+set firewall name trusted-management rule 2 action 'accept'
+set firewall name trusted-management rule 2 description 'Rule: accept_http_https'
+set firewall name trusted-management rule 2 destination port 'http,https'
+set firewall name trusted-management rule 2 protocol 'tcp'
+# Accept iDRAC KVM functions
+set firewall name trusted-management rule 3 action 'accept'
+set firewall name trusted-management rule 3 description 'Rule: accept_idrac_kvm_functions'
+set firewall name trusted-management rule 3 destination port '5900,5901'
+set firewall name trusted-management rule 3 protocol 'tcp'
+# Accept CIMC KVM functions
+set firewall name trusted-management rule 4 action 'accept'
+set firewall name trusted-management rule 4 description 'Rule: accept_cimc_kvm_functions'
+set firewall name trusted-management rule 4 destination port '2068'
+set firewall name trusted-management rule 4 protocol 'tcp'
 
 ## From TRUSTED to WAN
 set firewall name trusted-wan description 'From TRUSTED to WAN'
@@ -452,6 +517,7 @@ set firewall name iot-local rule 5 protocol 'udp'
 ## From IOT to SERVICES
 set firewall name iot-services description 'From IOT to SERVICES'
 set firewall name iot-services default-action 'drop'
+set firewall name iot-services enable-default-log
 # Accept DNS
 set firewall name iot-services rule 1 action 'accept'
 set firewall name iot-services rule 1 description 'Rule: accept_dns'
@@ -492,6 +558,11 @@ set firewall name iot-trusted rule 1 protocol 'udp'
 set firewall name iot-guest description 'From IOT to GUEST'
 set firewall name iot-guest default-action 'drop'
 set firewall name iot-guest enable-default-log
+
+## From IOT to MANAGEMENT
+set firewall name iot-management description 'From IOT to MANAGEMENT'
+set firewall name iot-management default-action 'drop'
+set firewall name iot-management enable-default-log
 
 ## From IOT to WAN
 set firewall name iot-wan description 'From IOT to WAN'
@@ -553,6 +624,11 @@ set firewall name guest-iot enable-default-log
 # set firewall name guest-iot rule 2 destination port '161'
 # set firewall name guest-iot rule 2 protocol 'udp'
 
+## From GUEST to MANAGEMENT
+set firewall name guest-management description 'From GUEST to MANAGEMENT'
+set firewall name guest-management default-action 'drop'
+set firewall name guest-management enable-default-log
+
 ## From GUEST to WAN
 set firewall name guest-wan description 'From GUEST to WAN'
 set firewall name guest-wan default-action 'accept'
@@ -599,6 +675,11 @@ set firewall name wan-iot enable-default-log
 set firewall name wan-guest description 'From WAN to GUEST'
 set firewall name wan-guest default-action 'drop'
 set firewall name wan-guest enable-default-log
+
+# From WAN to MANAGEMENT
+set firewall name wan-management description 'From WAN to MANAGEMENT'
+set firewall name wan-management default-action 'drop'
+set firewall name wan-management enable-default-log
 
 # From WAN to TRUSTED
 set firewall name wan-trusted description 'From WAN to TRUSTED'

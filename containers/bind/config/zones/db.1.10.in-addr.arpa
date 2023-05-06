@@ -30,6 +30,10 @@ $ORIGIN in-addr.arpa.
 11.1.1.10                  IN  PTR  ares.dan.sm.
 12.1.1.10                  IN  PTR  aurora.dan.sm.
 
+; Management
+11.4.1.10                  IN  PTR  ares-ipmi.dan.sm.
+12.4.1.10                  IN  PTR  aurora-ipmi.dan.sm.
+
 ; CLUSTERS
 31.1.1.10                  IN  PTR  c0-ares-0.dan.sm.
 32.1.1.10                  IN  PTR  c0-ares-1.dan.sm.

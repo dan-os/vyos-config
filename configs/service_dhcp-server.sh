@@ -45,10 +45,10 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 name-serv
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 start '10.1.1.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 stop '10.1.1.254'
 
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.11'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora mac-address 'ec:f4:bb:ce:75:44' # Dell PowerEdge R720
-set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares ip-address '10.1.1.12'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares ip-address '10.1.1.11'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares mac-address '70:0f:6a:38:ba:24' # Cisco UCS C240 M4
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.12'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora mac-address 'ec:f4:bb:ce:75:44' # Dell PowerEdge R720
 
 # TRUSTED network
 set service dhcp-server shared-network-name TRUSTED authoritative
@@ -62,6 +62,8 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 range 0 s
 
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook ip-address '10.1.2.2'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook mac-address 'f4:d4:88:6e:41:4f' # Dan's Laptop
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone ip-address '10.1.2.3'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone mac-address 'e2:3c:37:6e:3b:62' # Dan's iPhone
 
 # IOT network
 set service dhcp-server shared-network-name IOT authoritative
@@ -72,6 +74,21 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.200'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.254'
+
+# MANAGEMENT network
+set service dhcp-server shared-network-name MANAGEMENT authoritative
+set service dhcp-server shared-network-name MANAGEMENT ping-check
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 default-router '10.1.4.1'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 domain-name 'dan.sm'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 lease '86400'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 name-server '10.5.0.4'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 range 0 start '10.1.4.200'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 range 0 stop '10.1.4.254'
+
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi ip-address '10.1.4.11'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi mac-address '70:0f:6a:38:ba:1e' # Cisco UCS C240 M4 IMC
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi ip-address '10.1.4.12'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi mac-address '18:fb:7b:9a:78:29' # Dell PowerEdge R720 iDRAC
 
 # GUEST network
 set service dhcp-server shared-network-name GUEST authoritative
