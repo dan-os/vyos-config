@@ -1,5 +1,4 @@
 #!/bin/vbash
-
 # This script updates network-groups 'cloudflare-networks-v4' and 
 # 'cloudflare-networks-v6' with the latest Cloudflare networks.
 
