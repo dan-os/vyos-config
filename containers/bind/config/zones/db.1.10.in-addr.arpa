@@ -20,9 +20,11 @@ $ORIGIN in-addr.arpa.
 
 ; LAN
 1.0.1.10                   IN  PTR  gateway.dan.sm.
+10.0.1.10                  IN  PTR  unifi.dan.sm.
 
 ; SERVICES
-4.5.0.10                   IN  PTR  ns.dan.sm.
+4.0.5.10                   IN  PTR  ns.dan.sm.
+2.0.5.10                   IN  PTR  c0.dan.sm.
 
 ; Servers
 11.1.1.10                  IN  PTR  ares.dan.sm.

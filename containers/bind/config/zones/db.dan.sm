@@ -17,11 +17,11 @@ $ORIGIN dan.sm.
 
 ; LAN
 gateway                    IN  A  10.1.0.1
+unifi                      IN  A  10.1.0.10
 
 ; SERVICES
 ns                         IN  A  10.5.0.4
 c0                         IN  A  10.5.0.2
-unifi                      IN  A  10.5.0.10
 
 ; SERVERS
 ares                       IN  A  10.1.1.11

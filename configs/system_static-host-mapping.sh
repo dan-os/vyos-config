@@ -6,7 +6,7 @@
 # set system static-host-mapping host-name gateway.dan.sm alias ipv4.dan.sm
 
 # # Unifi
-# set system static-host-mapping host-name unifi.dan.sm inet 10.5.0.10
+# set system static-host-mapping host-name unifi.dan.sm inet 10.1.0.10
 
 # # Proxmox hosts
 # set system static-host-mapping host-name aurora.dan.sm inet 10.1.1.11
