@@ -569,6 +569,62 @@ set firewall name iot-wan description 'From IOT to WAN'
 set firewall name iot-wan default-action 'accept'
 
 ################################################################################################################################
+## From MANAGEMENT to LAN
+set firewall name management-lan description 'From MANAGEMENT to LAN'
+set firewall name management-lan default-action 'drop'
+set firewall name management-lan enable-default-log
+
+## From MANAGEMENT to LOCAL
+set firewall name management-local description 'From MANAGEMENT to LOCAL'
+set firewall name management-local default-action 'drop'
+set firewall name management-local enable-default-log
+# Accept DHCP
+set firewall name management-local rule 1 action 'accept'
+set firewall name management-local rule 1 description 'Rule: accept_dhcp'
+set firewall name management-local rule 1 source port '67,68'
+set firewall name management-local rule 1 destination port '67,68'
+set firewall name management-local rule 1 protocol 'udp'
+# Accept NTP
+set firewall name management-local rule 2 action 'accept'
+set firewall name management-local rule 2 description 'Rule: accept_ntp'
+set firewall name management-local rule 2 destination port 'ntp'
+set firewall name management-local rule 2 protocol 'udp'
+
+## From MANAGEMENT to SERVICES
+set firewall name management-services description 'From MANAGEMENT to SERVICES'
+set firewall name management-services default-action 'drop'
+set firewall name management-services enable-default-log
+# Accept DNS
+set firewall name management-services rule 1 action 'accept'
+set firewall name management-services rule 1 description 'Rule: accept_dns'
+set firewall name management-services rule 1 destination port 'domain,domain-s'
+set firewall name management-services rule 1 protocol 'tcp_udp'
+
+## From MANAGEMENT to SERVERS
+set firewall name management-servers description 'From MANAGEMENT to SERVERS'
+set firewall name management-servers default-action 'drop'
+set firewall name management-servers enable-default-log
+
+## From MANAGEMENT to TRUSTED
+set firewall name management-trusted description 'From MANAGEMENT to TRUSTED'
+set firewall name management-trusted default-action 'drop'
+set firewall name management-trusted enable-default-log
+
+## From MANAGEMENT to IOT
+set firewall name management-iot description 'From MANAGEMENT to IOT'
+set firewall name management-iot default-action 'drop'
+set firewall name management-iot enable-default-log
+
+## From MANAGEMENT to GUEST
+set firewall name management-guest description 'From MANAGEMENT to GUEST'
+set firewall name management-guest default-action 'drop'
+set firewall name management-guest enable-default-log
+
+## From MANAGEMENT to WAN
+set firewall name management-wan description 'From MANAGEMENT to WAN'
+set firewall name management-wan default-action 'accept'
+
+################################################################################################################################
 ## From GUEST to LAN
 set firewall name guest-lan description 'From GUEST to LAN'
 set firewall name guest-lan default-action 'drop'
