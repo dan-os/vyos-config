@@ -64,6 +64,8 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-ma
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook mac-address 'f4:d4:88:6e:41:4f' # Dan's Laptop
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone ip-address '10.1.2.3'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone mac-address 'e2:3c:37:6e:3b:62' # Dan's iPhone
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-eth-dongle ip-address '10.1.2.3'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-eth-dongle mac-address '9c:53:22:3f:bd:4e' # TP-Link UE300
 
 # IOT network
 set service dhcp-server shared-network-name IOT authoritative
