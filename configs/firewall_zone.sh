@@ -78,6 +78,7 @@ set firewall zone iot from trusted firewall name 'trusted-iot'
 set firewall zone iot from guest firewall name 'guest-iot'
 set firewall zone iot from wan firewall name 'wan-iot'
 set firewall zone iot interface 'eth1.40'
+set firewall zone iot interface 'eth2' # to UDMP
 
 # MANAGEMENT
 set firewall zone management description 'Management zone'

@@ -22,8 +22,8 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.1.0.10;'
 
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller ip-address '10.1.0.10'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:d1' # UDM-Pro
+# set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller ip-address '10.1.0.10'
+# set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:??' # UDM-Pro LAN
 # LAN Switches
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 ip-address '10.1.0.11'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 mac-address '68:d7:9a:63:2c:41' # USW-Lite-8-POE
@@ -76,6 +76,9 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.200'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.254'
+
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping unifi-gw-wan ip-address '10.1.3.10'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping unifi-gw-wan mac-address '68:d7:9a:50:31:d1' # UDM-Pro WAN
 
 # MANAGEMENT network
 set service dhcp-server shared-network-name MANAGEMENT authoritative
