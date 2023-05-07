@@ -12,6 +12,7 @@ set firewall zone lan from guest firewall name 'guest-lan'
 set firewall zone lan from iot firewall name 'iot-lan'
 set firewall zone lan from wan firewall name 'wan-lan'
 set firewall zone lan interface 'eth1'
+set firewall zone lan interface 'eth2'
 
 # LOCAL
 set firewall zone local description 'Local router zone'
@@ -78,7 +79,7 @@ set firewall zone iot from trusted firewall name 'trusted-iot'
 set firewall zone iot from guest firewall name 'guest-iot'
 set firewall zone iot from wan firewall name 'wan-iot'
 set firewall zone iot interface 'eth1.40'
-set firewall zone iot interface 'eth2' # to UDMP
+set firewall zone iot interface 'eth2.40' # to UDMP
 
 # MANAGEMENT
 set firewall zone management description 'Management zone'
