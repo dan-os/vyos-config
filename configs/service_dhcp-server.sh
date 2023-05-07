@@ -23,7 +23,7 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.1.0.10;'
 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller ip-address '10.1.0.10'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:c9' # UDM-Pro
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:d1' # UDM-Pro
 # LAN Switches
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 ip-address '10.1.0.11'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 mac-address '68:d7:9a:63:2c:41' # USW-Lite-8-POE
