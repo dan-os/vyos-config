@@ -23,7 +23,7 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.1.0.10;'
 
 # set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller ip-address '10.1.0.10'
-# set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '68:d7:9a:50:31:??' # UDM-Pro LAN
+# set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping unifi-controller mac-address '6a:d7:9a:50:31:ca' # UDM-Pro LAN
 # LAN Switches
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 ip-address '10.1.0.11'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping switch01 mac-address '68:d7:9a:63:2c:41' # USW-Lite-8-POE
@@ -76,7 +76,7 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-ma
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-macbook mac-address 'f4:d4:88:6e:41:4f' # Dan's Laptop
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone ip-address '10.1.2.3'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-iphone mac-address 'e2:3c:37:6e:3b:62' # Dan's iPhone
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-eth-dongle ip-address '10.1.2.3'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-eth-dongle ip-address '10.1.2.4'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.2.0/24 static-mapping dan-eth-dongle mac-address '9c:53:22:3f:bd:4e' # TP-Link UE300
 
 # IOT network
