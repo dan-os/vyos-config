@@ -35,14 +35,17 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mappin
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap02 ip-address '10.1.0.22'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping ap02 mac-address 'f4:92:bf:ac:42:4c' # U6-Lite
 
-# # LAN2 (UDMP port)
-# set service dhcp-server shared-network-name SERVICE authoritative
-# set service dhcp-server shared-network-name SERVICE ping-check
-# set service dhcp-server shared-network-name SERVICE subnet 10.2.0.0/24 default-router '10.2.0.1'
-# set service dhcp-server shared-network-name SERVICE subnet 10.2.0.0/24 lease '86400'
-# set service dhcp-server shared-network-name SERVICE subnet 10.2.0.0/24 name-server '10.5.0.4'
-# set service dhcp-server shared-network-name SERVICE subnet 10.2.0.0/24 range 0 start '10.2.0.200'
-# set service dhcp-server shared-network-name SERVICE subnet 10.2.0.0/24 range 0 stop '10.2.0.254'
+# LAN2 (UDMP port)
+set service dhcp-server shared-network-name LAN2 authoritative
+set service dhcp-server shared-network-name LAN2 ping-check
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 default-router '172.16.0.1'
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 lease '86400'
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 name-server '1.1.1.1'
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 range 0 start '172.16.0.200'
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 range 0 stop '172.16.0.254'
+
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 static-mapping unifi-gw-wan ip-address '172.16.0.2'
+set service dhcp-server shared-network-name LAN2 subnet 172.16.0.0/24 static-mapping unifi-gw-wan mac-address '68:d7:9a:50:31:d1' # UDM-Pro WAN
 
 # SERVERS network
 set service dhcp-server shared-network-name SERVERS authoritative
@@ -85,9 +88,6 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.200'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.254'
-
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping unifi-gw-wan ip-address '10.1.3.10'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping unifi-gw-wan mac-address '68:d7:9a:50:31:d1' # UDM-Pro WAN
 
 # MANAGEMENT network
 set service dhcp-server shared-network-name MANAGEMENT authoritative

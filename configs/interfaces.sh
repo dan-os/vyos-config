@@ -21,12 +21,9 @@ set interfaces ethernet eth1 vif 50 description 'MANAGEMENT'
 set interfaces ethernet eth1 vif 50 address '10.1.4.1/24'
 
 # eth2 (uplink for UDMP)
-set interfaces ethernet eth2 description 'UDMP (IOT)'
+set interfaces ethernet eth2 description 'LAN2'
 set interfaces ethernet eth2 hw-id 'ec:f4:bb:ce:75:47'
-set interfaces ethernet eth2 address '10.1.3.1/24'
-# set interfaces ethernet eth2 address '10.2.0.1/24'
-# set interfaces ethernet eth2 vif 40 description 'IOT'
-# set interfaces ethernet eth2 vif 40 address '10.1.3.2/24'
+set interfaces ethernet eth2 address '172.16.0.1/24'
 
 # Wireguard
 set interfaces wireguard wg01 description 'WIREGUARD'
