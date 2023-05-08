@@ -11,6 +11,7 @@ set system name-server '1.1.1.1'
 set system sysctl parameter kernel.pty.max value '24000'
 
 # SSH
+set system login banner post-login '\n           __                           \n      ____/ /___ _____    _________ ___ \n     / __  / __ `/ __ \\  / ___/ __ `__ \\\n    / /_/ / /_/ / / / / (__  ) / / / / /\n    \\__,_/\\__,_/_/ /_(_)____/_/ /_/ /_/ \n\n'
 set system login user vyos authentication public-keys dan-macbook key 'AAAAC3NzaC1lZDI1NTE5AAAAIDxJWUR/LYvaS7H2fVp/UX/xPo4JLdQRxSBkH3wZ4Bcl'
 set system login user vyos authentication public-keys dan-macbook type 'ssh-ed25519'
 
