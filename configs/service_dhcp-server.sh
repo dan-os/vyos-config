@@ -101,8 +101,8 @@ set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 range 
 
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi ip-address '10.1.4.11'
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi mac-address '70:0f:6a:38:ba:1e' # Cisco UCS C240 M4 IMC
-set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi ip-address '10.1.4.12'
-set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi mac-address '18:fb:7b:9a:78:29' # Dell PowerEdge R720 iDRAC
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping aurora-ipmi ip-address '10.1.4.12'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping aurora-ipmi mac-address '18:fb:7b:9a:78:29' # Dell PowerEdge R720 iDRAC
 
 # GUEST network
 set service dhcp-server shared-network-name GUEST authoritative
