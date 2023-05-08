@@ -20,5 +20,5 @@ export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
 export VISUAL=nano
 export EDITOR=nano
 alias podman="sudo podman"
-alias update="cd /config && git pull origin main && ./apply-config.sh"
+alias sync="cd /config && git pull origin main && ./apply-config.sh"
 END
