@@ -14,7 +14,7 @@ tee /home/vyos/.gitconfig <<END >/dev/null
   name = dan-os
 END
 
-tee -a /home/vyos/.bash_aliases <<END >/dev/null
+tee /home/vyos/.bash_aliases <<END >/dev/null
 export SOPS_AGE_KEY_FILE=/config/secrets/vyos.agekey
 export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
 export VISUAL=nano
