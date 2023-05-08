@@ -36,10 +36,10 @@ set firewall name lan-services rule 1 action 'accept'
 set firewall name lan-services rule 1 description 'Rule: accept_dns'
 set firewall name lan-services rule 1 destination port 'domain,domain-s'
 set firewall name lan-services rule 1 protocol 'tcp_udp'
-# Accept Unifi
-set firewall name lan-services rule 2 description 'Rule: accept unifi'
-set firewall name lan-services rule 2 action 'accept'
-set firewall name lan-services rule 2 destination group address-group 'unifi_controller'
+# # Accept Unifi
+# set firewall name lan-services rule 2 description 'Rule: accept unifi'
+# set firewall name lan-services rule 2 action 'accept'
+# set firewall name lan-services rule 2 destination group address-group 'unifi_controller'
 
 ## From LAN to SERVERS
 set firewall name lan-servers description 'From LAN to SERVERS'
