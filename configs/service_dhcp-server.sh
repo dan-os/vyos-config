@@ -99,6 +99,8 @@ set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 name-s
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 range 0 start '10.1.4.200'
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 range 0 stop '10.1.4.254'
 
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping redetec-fss ip-address '10.1.4.5'
+set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping redetec-fss mac-address '00:0c:c8:05:19:6f' # Redetec PF/RED/3.0/IP
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi ip-address '10.1.4.11'
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping ares-ipmi mac-address '70:0f:6a:38:ba:1e' # Cisco UCS C240 M4 IMC
 set service dhcp-server shared-network-name MANAGEMENT subnet 10.1.4.0/24 static-mapping aurora-ipmi ip-address '10.1.4.12'
