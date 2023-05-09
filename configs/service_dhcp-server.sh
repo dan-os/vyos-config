@@ -57,10 +57,24 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 name-serv
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 start '10.1.1.200'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 range 0 stop '10.1.1.254'
 
+# Metal
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares ip-address '10.1.1.11'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping ares mac-address '70:0f:6a:38:ba:24' # Cisco UCS C240 M4
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.12'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora mac-address 'ec:f4:bb:ce:75:44' # Dell PowerEdge R720
+# K8s cluster (c0)
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-0 ip-address '10.1.1.31'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-0 mac-address '3e:11:b3:bb:5d:0d'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-1 ip-address '10.1.1.32'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-1 mac-address '3a:1f:69:51:27:39'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-2 ip-address '10.1.1.33'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-2 mac-address '9e:aa:2e:95:e9:e3'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-0 ip-address '10.1.1.34'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-0 mac-address 'c2:25:b9:a5:43:80'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-1 ip-address '10.1.1.35'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-1 mac-address 'ea:f7:34:25:a1:ba'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-2 ip-address '10.1.1.36'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-aurora-2 mac-address '0a:44:7e:2f:7e:9a'
 
 # TRUSTED network
 set service dhcp-server shared-network-name TRUSTED authoritative
