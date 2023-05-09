@@ -28,6 +28,7 @@ ares                       IN  A  10.1.1.11
 aurora                     IN  A  10.1.1.12
 
 ; MANAGEMENT
+redetec-fss                IN  A  10.1.4.5
 ares-ipmi                  IN  A  10.1.4.11
 aurora-ipmi                IN  A  10.1.4.12
 
