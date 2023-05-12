@@ -33,6 +33,7 @@ ares-ipmi                  IN  A  10.1.4.11
 aurora-ipmi                IN  A  10.1.4.12
 
 ; CLUSTERS
+c0-pi-0                    IN  A  10.1.1.21
 c0-ares-0                  IN  A  10.1.1.31
 c0-ares-1                  IN  A  10.1.1.32
 c0-ares-2                  IN  A  10.1.1.33

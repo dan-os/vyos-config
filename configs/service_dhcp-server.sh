@@ -63,6 +63,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-ma
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora ip-address '10.1.1.12'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping aurora mac-address 'ec:f4:bb:ce:75:44' # Dell PowerEdge R720
 # K8s cluster (c0)
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-pi-0 ip-address '10.1.1.21'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-pi-0 mac-address 'dc:a6:32:e1:22:bc' # Raspberry Pi 4B 8GB
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-0 ip-address '10.1.1.31'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-0 mac-address '3e:11:b3:bb:5d:0d'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.1.0/24 static-mapping c0-ares-1 ip-address '10.1.1.32'

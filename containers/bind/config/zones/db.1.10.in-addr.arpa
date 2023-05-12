@@ -36,6 +36,7 @@ $ORIGIN in-addr.arpa.
 12.4.1.10                  IN  PTR  aurora-ipmi.dan.sm.
 
 ; CLUSTERS
+21.1.1.10                  IN  PTR  c0-pi-0.dan.sm.
 31.1.1.10                  IN  PTR  c0-ares-0.dan.sm.
 32.1.1.10                  IN  PTR  c0-ares-1.dan.sm.
 33.1.1.10                  IN  PTR  c0-ares-2.dan.sm.
