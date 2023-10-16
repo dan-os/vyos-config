@@ -30,6 +30,11 @@ set interfaces wireguard wg01 description 'WIREGUARD'
 set interfaces wireguard wg01 address '10.0.11.1/24'
 set interfaces wireguard wg01 port '51820'
 set interfaces wireguard wg01 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
+
 set interfaces wireguard wg01 peer dan-macbook persistent-keepalive '15'
 set interfaces wireguard wg01 peer dan-macbook allowed-ips '10.0.11.2/32'
 set interfaces wireguard wg01 peer dan-macbook public-key '7TlCptbATBQvnEghLqnSriP1uFFoPGqnaQ9lMXWShiE='
+
+set interfaces wireguard wg01 peer dan-iphone persistent-keepalive '15'
+set interfaces wireguard wg01 peer dan-iphone allowed-ips '10.0.11.3/32'
+set interfaces wireguard wg01 peer dan-iphone public-key '3W/SS2rpC6GWHgFFpJa8H+oKdvrY/Znf8lGSB5MBCTM='
