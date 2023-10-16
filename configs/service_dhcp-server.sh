@@ -105,6 +105,9 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.200'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.254'
 
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hue-bridge ip-address '10.1.3.5'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping hue-bridge mac-address '00:17:88:78:2d:b1' # Philips Hue Bridge
+
 # MANAGEMENT network
 set service dhcp-server shared-network-name MANAGEMENT authoritative
 set service dhcp-server shared-network-name MANAGEMENT ping-check
